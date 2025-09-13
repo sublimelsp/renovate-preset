@@ -8,7 +8,7 @@
   },
   "packageRules": [
     {
-      "groupName": "pip dependencies",
+      "groupName": "minor/patch pip dependencies",
       "matchManagers": [
         "pip_requirements"
       ]
