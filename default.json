@@ -5,5 +5,13 @@
   ],
   "pyenv": {
     "enabled": false
-  }
+  },
+  "packageRules": [
+    {
+      "groupName": "pip dependencies",
+      "matchManagers": [
+        "pip_requirements"
+      ]
+    }
+  ]
 }
