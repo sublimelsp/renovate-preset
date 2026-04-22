@@ -12,6 +12,11 @@
       "matchManagers": [
         "pip_requirements"
       ]
+    },
+    {
+      "groupName": "GitHub Actions",
+      "matchManagers": ["github-actions"],
+      "automerge": true
     }
   ]
 }
