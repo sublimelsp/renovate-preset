@@ -1,0 +1,42 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Automerge non-major language server updates after they are 3 days old. Only extend this in packages whose CI runs the smoke test.",
+  "packageRules": [
+    {
+      "description": "Server updates bundled through npm or uv",
+      "matchFileNames": ["language-server/**", "server/**"],
+      "semanticCommitType": "fix",
+      "minimumReleaseAge": "3 days"
+    },
+    {
+      "description": "Server updates tracked by a custom manager, such as a version in plugin.py",
+      "matchManagers": ["custom.regex", "custom.jsonata"],
+      "semanticCommitType": "fix",
+      "minimumReleaseAge": "3 days"
+    },
+    {
+      "matchFileNames": ["language-server/**", "server/**"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    },
+    {
+      "description": "Minor updates of 0.x servers can be breaking, so they aren't automerged",
+      "matchFileNames": ["language-server/**", "server/**"],
+      "matchUpdateTypes": ["minor"],
+      "matchCurrentVersion": "!/^[\\^~=v]*0\\./",
+      "automerge": true
+    },
+    {
+      "matchManagers": ["custom.regex", "custom.jsonata"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    },
+    {
+      "description": "Minor updates of 0.x servers can be breaking, so they aren't automerged",
+      "matchManagers": ["custom.regex", "custom.jsonata"],
+      "matchUpdateTypes": ["minor"],
+      "matchCurrentVersion": "!/^[\\^~=v]*0\\./",
+      "automerge": true
+    }
+  ]
+}
