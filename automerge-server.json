@@ -1,6 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Automerge non-major language server updates after they are 3 days old. Only extend this in packages whose CI runs the smoke test.",
+  "description": "Automerge non-major language server updates after they are 3 days old. Only extend this in packages whose CI runs the smoke test. Also enables semantic commit messages, from which the release workflow decides whether to release.",
+  "semanticCommits": "enabled",
   "packageRules": [
     {
       "description": "Server updates bundled through npm or uv",
