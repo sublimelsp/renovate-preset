@@ -16,6 +16,19 @@
       "minimumReleaseAge": "3 days"
     },
     {
+      "description": "Lock file maintenance has no release timestamp, so minimumReleaseAge keeps it pending forever. pnpm and uv apply the age gate instead",
+      "matchManagers": [
+        "pep621",
+        "pip_requirements"
+      ],
+      "matchUpdateTypes": [
+        "lockFileMaintenance"
+      ],
+      "branchTopic": "python-lockfile-maintenance",
+      "commitMessageAction": "Python lock file maintenance",
+      "minimumReleaseAge": null
+    },
+    {
       "matchFileNames": ["language-server/**", "server/**"],
       "matchUpdateTypes": ["patch"],
       "automerge": true
