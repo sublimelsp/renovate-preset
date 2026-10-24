@@ -1,7 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Automerge non-major language server updates after they are 3 days old. Only extend this in packages whose CI runs the smoke test. Also enables semantic commit messages, from which the release workflow decides whether to release.",
+  "description": "Automerge non-major language server updates after they are 3 days old. Only extend this in packages whose CI runs the smoke test. Also enables semantic commit messages, from which the release workflow decides whether to release. Commits that workflows push to Renovate's branches as github-actions[bot], such as a downloaded or compiled server, don't stop Renovate from automerging and rebasing them.",
   "semanticCommits": "enabled",
+  "gitIgnoredAuthors": ["github-actions[bot]@users.noreply.github.com"],
   "packageRules": [
     {
       "description": "Server updates bundled through npm or uv",
