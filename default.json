@@ -17,6 +17,12 @@
       "groupName": "GitHub Actions",
       "matchManagers": ["github-actions"],
       "automerge": true
+    },
+    {
+      "description": "Major GitHub Actions updates can be breaking, so they aren't automerged",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
     }
   ]
 }
