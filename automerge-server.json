@@ -6,17 +6,14 @@
     {
       "description": "Server updates bundled through npm or uv",
       "matchFileNames": ["language-server/**", "server/**"],
-      "semanticCommitType": "fix",
-      "minimumReleaseAge": "3 days"
+      "semanticCommitType": "fix"
     },
     {
       "description": "Server updates tracked by a custom manager, such as a version in plugin.py",
       "matchManagers": ["custom.regex", "custom.jsonata"],
-      "semanticCommitType": "fix",
-      "minimumReleaseAge": "3 days"
+      "semanticCommitType": "fix"
     },
     {
-      "description": "Lock file maintenance has no release timestamp, so minimumReleaseAge keeps it pending forever. pnpm and uv apply the age gate instead",
       "matchManagers": [
         "pep621",
         "pip_requirements"
@@ -25,8 +22,7 @@
         "lockFileMaintenance"
       ],
       "branchTopic": "python-lockfile-maintenance",
-      "commitMessageAction": "Python lock file maintenance",
-      "minimumReleaseAge": null
+      "commitMessageAction": "Python lock file maintenance"
     },
     {
       "matchFileNames": ["language-server/**", "server/**"],
