@@ -27,6 +27,16 @@
       "commitMessageAction": "Python lock file maintenance"
     },
     {
+      "matchManagers": [
+        "npm"
+      ],
+      "matchUpdateTypes": [
+        "lockFileMaintenance"
+      ],
+      "branchTopic": "node-lockfile-maintenance",
+      "commitMessageAction": "Node lock file maintenance"
+    },
+    {
       "matchFileNames": ["language-server/**", "server/**"],
       "matchUpdateTypes": ["patch"],
       "automerge": true
