@@ -1,7 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Automerge non-major language server updates. Only extend this in packages whose CI runs the smoke test. Also enables semantic commit messages, from which the release workflow decides whether to release. Commits that workflows push to Renovate's branches as github-actions[bot], such as a downloaded or compiled server, don't stop Renovate from automerging and rebasing them.",
+  "description": "Automerge non-major language server updates. Only extend this in packages whose CI runs the smoke test. Also enables semantic commit messages, from which the release workflow decides whether to release. Commits that workflows push to Renovate's branches as github-actions[bot], such as a downloaded or compiled server, don't stop Renovate from automerging and rebasing them. Renovate merges the PRs itself instead of enabling GitHub's auto-merge, so that it waits for all checks, not only the required ones, such as the check that fails while the settings need review.",
   "semanticCommits": "enabled",
+  "platformAutomerge": false,
   "gitIgnoredAuthors": ["github-actions[bot]@users.noreply.github.com"],
   "packageRules": [
     {
