@@ -6,6 +6,10 @@
   "pyenv": {
     "enabled": false
   },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["* 0-9 * * 1"]
+  },
   "packageRules": [
     {
       "groupName": "minor/patch pip dependencies",
