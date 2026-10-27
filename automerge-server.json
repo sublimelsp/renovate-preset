@@ -16,27 +16,6 @@
       "semanticCommitType": "fix"
     },
     {
-      "matchManagers": [
-        "pep621",
-        "pip_requirements"
-      ],
-      "matchUpdateTypes": [
-        "lockFileMaintenance"
-      ],
-      "branchTopic": "python-lockfile-maintenance",
-      "commitMessageAction": "Python lock file maintenance"
-    },
-    {
-      "matchManagers": [
-        "npm"
-      ],
-      "matchUpdateTypes": [
-        "lockFileMaintenance"
-      ],
-      "branchTopic": "node-lockfile-maintenance",
-      "commitMessageAction": "Node lock file maintenance"
-    },
-    {
       "matchFileNames": ["language-server/**", "server/**"],
       "matchUpdateTypes": ["patch"],
       "automerge": true

@@ -12,6 +12,27 @@
   },
   "packageRules": [
     {
+      "matchManagers": [
+        "pep621",
+        "pip_requirements"
+      ],
+      "matchUpdateTypes": [
+        "lockFileMaintenance"
+      ],
+      "branchTopic": "python-lockfile-maintenance",
+      "commitMessageAction": "Python lock file maintenance"
+    },
+    {
+      "matchManagers": [
+        "npm"
+      ],
+      "matchUpdateTypes": [
+        "lockFileMaintenance"
+      ],
+      "branchTopic": "node-lockfile-maintenance",
+      "commitMessageAction": "Node lock file maintenance"
+    },
+    {
       "groupName": "minor/patch pip dependencies",
       "matchManagers": [
         "pip_requirements"
