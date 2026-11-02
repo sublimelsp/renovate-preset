@@ -10,7 +10,7 @@
     "enabled": true,
     "automerge": true,
     "platformAutomerge": false,
-    "schedule": ["* 0-9 * * 1"]
+    "schedule": ["* 0-23 * * 1"]
   },
   "packageRules": [
     {
