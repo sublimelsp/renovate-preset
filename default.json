@@ -8,6 +8,8 @@
   },
   "lockFileMaintenance": {
     "enabled": true,
+    "automerge": true,
+    "platformAutomerge": false,
     "schedule": ["* 0-9 * * 1"]
   },
   "packageRules": [
