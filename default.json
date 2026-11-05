@@ -35,6 +35,15 @@
       "commitMessageAction": "Node lock file maintenance"
     },
     {
+      "description": "Run npm dedupe after lock file updates so overlapping ranges resolve to a single copy",
+      "matchManagers": [
+        "npm"
+      ],
+      "postUpdateOptions": [
+        "npmDedupe"
+      ]
+    },
+    {
       "groupName": "minor/patch pip dependencies",
       "matchManagers": [
         "pip_requirements"
